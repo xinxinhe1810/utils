@@ -1,0 +1,26 @@
+@mixin textOverflowEllipsis($rowCount, $lineHeight) {
+  @if $rowCount <=1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    min-width: 0;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    /* autoprefixer: off */
+    max-height: $lineHeight * $line;
+    -webkit-line-clamp: $rowCount;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@mixin ResponsiveBg($imageX1, $imageX2, $imageX3) {
+  background-color: transparent;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url($imageX1);
+  background-image: image-set(url($imageX1) 1x, url($imageX2) 2x, url($imageX3) 3x);
+}
