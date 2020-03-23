@@ -1,0 +1,78 @@
+Arguments: 
+  /Users/hexin/.nvm/versions/node/v8.11.3/bin/node /usr/local/bin/yarn
+
+PATH: 
+  /Users/hexin/.nvm/versions/node/v8.11.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.15.2
+
+Node version: 
+  8.11.3
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: http://npm.ixiaochuan.cn/@babel%2fhelper-validator-identifier/-/helper-validator-identifier-7.9.0.tgz: Request failed "500 Internal Server Error"
+      at ResponseError.ExtendableBuiltin (/usr/local/lib/node_modules/yarn/lib/cli.js:696:66)
+      at new ResponseError (/usr/local/lib/node_modules/yarn/lib/cli.js:802:124)
+      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:66128:16)
+      at emitOne (events.js:116:13)
+      at Request.emit (events.js:211:7)
+      at Request.module.exports.Request.onRequestResponse (/usr/local/lib/node_modules/yarn/lib/cli.js:130418:10)
+      at emitOne (events.js:116:13)
+      at ClientRequest.emit (events.js:211:7)
+      at HTTPParser.parserOnIncomingClient (_http_client.js:543:21)
+      at HTTPParser.parserOnHeadersComplete (_http_common.js:112:17)
+
+npm manifest: 
+  {
+    "name": "utils.css",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "lint:fix": "eslint --fix \"src/**/*.js\""
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "lint-staged"
+      }
+    },
+    "lint-staged": {
+      "src/**/*.js": [
+        "eslint --fix",
+        "git add"
+      ]
+    },
+    "devDependencies": {
+      "babel-eslint": "^10.0.1",
+      "eslint": "^5.0.1",
+      "eslint-config-airbnb-base": "^13.1.0",
+      "eslint-config-prettier": "^2.9.0",
+      "eslint-plugin-import": "^2.8.0",
+      "eslint-plugin-prettier": "^2.3.1",
+      "husky": "^2.4.1",
+      "lint-staged": "^8.1.7",
+      "nodemon": "^1.19.1",
+      "prettier": "^1.17.1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/18292843691/utils.css.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/18292843691/utils.css/issues"
+    },
+    "homepage": "https://github.com/18292843691/utils.css#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
