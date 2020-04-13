@@ -10,7 +10,6 @@
     "window":true,
     "document" : true
   },
-
   "rules": {
       "prettier/prettier": "error",
       "no-console": 1,
