@@ -7,11 +7,14 @@
   ],
    "globals": {
     "test": true,
+    "window":true,
+    "document" : true
   },
 
   "rules": {
       "prettier/prettier": "error",
       "no-console": 1,
-      "import/extensions": "never"
+      "import/extensions": "never",
+      "linebreak-style": "off"
   }
 }
