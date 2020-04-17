@@ -51,6 +51,34 @@ const subStrRealLength = (str, len, exact) =>
         .replace(/([^x00-xff])a/g, '$1')
     : String(str).slice(0, len)
 
-const _ = ''
+// 截取两个特定字符串中间的内容
+/**
+ *
+ * @param {string} str - 整个字符串
+ * @param {string} firstStr  - 要截取字符串之前的内容
+ * @param {string} secondStr - 要截取字符串之后的内容
+ */
+const getStrs = (str, firstStr, secondStr) => {
+  if (str === '' || str == null || str === undefined) {
+    // "",null,undefined
+    return ''
+  }
+  if (str.indexOf(firstStr) < 0) {
+    return ''
+  }
+  const subFirstStr = str.substring(
+    str.indexOf(firstStr) + firstStr.length,
+    str.length
+  )
+  const subSecondStr = subFirstStr.substring(0, subFirstStr.indexOf(secondStr))
+  return subSecondStr
+}
 
-export {_ as default, animateScrollTo, getStrRealLength, subStrRealLength}
+const _ = ''
+export {
+  _ as default,
+  animateScrollTo,
+  getStrRealLength,
+  subStrRealLength,
+  getStrs,
+}
