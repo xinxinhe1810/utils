@@ -1,5 +1,8 @@
 {
   "parser": "babel-eslint",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "plugins": ["prettier"],
   "extends": [
     "airbnb-base", 
@@ -12,7 +15,14 @@
   },
   "rules": {
       "prettier/prettier": "error",
-      "no-console": 1,
+      "no-console": 1
       // "import/extensions": "never"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
   }
 }

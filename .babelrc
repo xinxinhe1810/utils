@@ -1,0 +1,25 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "esmodules": true,
+          "node": "current"
+        },
+        "useBuiltIns": "usage", // polyfill 动态引入
+        "corejs": "2"
+      }
+    ],
+    "@babel/preset-react",
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    ["@babel/plugin-transform-classes", {
+        "loose": false
+      }
+    ],
+    "@babel/plugin-transform-proto-to-assign",
+    "@babel/plugin-transform-typescript"
+  ]
+}

@@ -3,8 +3,9 @@
  * @param {number} top - 需要滚动到的目标 top 值
  * @param {number} duration - 滚动到目标所需的时间 ms
  */
-function animateScrollTo(top, duration) {
-  let rafId
+function animateScrollTo(top: number, duration: number): void {
+  let rafId: any
+
   let currentBodyScrollTop =
     window.pageYOffset ||
     document.documentElement.scrollTop ||
@@ -29,8 +30,8 @@ function animateScrollTo(top, duration) {
 }
 
 // 获取字符长度、中文为2
-const getStrRealLength = str => {
-  if (str == null) return 0
+const getStrRealLength = (str: string): number => {
+  if (!str) return 0
   // eslint-disable-next-line no-control-regex
   return String(str).replace(/[^\x00-\xff]/g, '01').length
 }
@@ -42,7 +43,7 @@ const getStrRealLength = str => {
  * @param {number} len  - 截取字符串长度
  * @param {boolean} exact - 是否精确匹配字节长度
  */
-const subStrRealLength = (str, len, exact) =>
+const subStrRealLength = (str: string, len: number, exact: boolean): string =>
   exact
     ? String(str)
         .slice(0, len)

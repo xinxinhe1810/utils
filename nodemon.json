@@ -1,14 +1,14 @@
 {
   "restartable": "rs",
   "watch": [
-      "src/**/*.js"
+      "src/**/*"
   ],
   "ignore": [
       ".git",
       "node_modules"
   ],
   "execMap": {
-    "js": "eslint --fix \"src/**/*.js\""
+    "js": "node index.js"
   },
-  "ext": "js"
+  "ext": "*"
 }
