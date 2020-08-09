@@ -1,4 +1,5 @@
 /* css 文本两端对齐 */
+
 .test1 {
   text-align:justify;
   text-justify:distribute-all-lines;/*ie6-8*/
